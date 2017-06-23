@@ -35,7 +35,7 @@ def label(analysis, threshold=0):
 for gm in gm_names:
     gm_polarities = []
     # Get the tweets about GMs since the expansion draft
-    gm_tweets = api.search(q=[gm], count=500, since=exp_date, until=curr_date)
+    gm_tweets = api.search(q=[gm], count=100, since=exp_date, until=curr_date)
     # Save tweets in csv
     with open('%s_tweets.csv' % gm, 'w') as gm_file:
         gm_file.write('tweet, sentiment, polarity\n')
